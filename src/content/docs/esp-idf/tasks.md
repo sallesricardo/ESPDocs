@@ -135,3 +135,40 @@ void task_minha_logica(void *pvParameters) {
 
 Acompanhe a execução da task por um tempo e veja o quanto de stack livre ela está usando.
 Se possivel, simule a pior condição possível e veja o quanto de stack livre ela está usando.
+
+
+## O que é o task handler?
+
+O task handler é o ponteiro para a task em execução.
+Isso é util para acessar informações da task em execução.
+
+```c
+TaskHandle_t myTaskHandle = NULL;
+
+void app_main( void )
+{
+    myTaskHandle = xTaskCreate(
+        vTask1,
+        "Task 1",
+        1024,
+        NULL,
+        1,
+        &myTaskHandle
+    );
+}
+```
+
+Com esse handler podemos por exemplo suspender a task:
+```c
+vTaskSuspend( myTaskHandle );
+```
+E resumir a task:
+```c
+vTaskResume( myTaskHandle );
+```
+Quando a task está suspensa, o scheduler não irá executar a task.
+
+> Exite a possibilidade de usar vTaskSuspendAll e vTaskResumeAll para suspender e resumir todas as tasks.
+> Nesse caso o scheduler não irá executar nenhuma outra task alem da task que chamou o vTaskSuspendAll.
+> Isso é útil em tarefas que não possam ser interrompidas.
+

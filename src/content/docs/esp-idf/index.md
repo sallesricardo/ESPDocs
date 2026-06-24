@@ -1,6 +1,7 @@
 ---
 title: Getting Started
 layout: ../../../layouts/MainLayout.astro
+index: 0
 ---
 
 ## Introdução
