@@ -5,7 +5,7 @@ description: ESP32-DevKitC Hardware
 
 # Hardware ESP32-DevKitC
 
-![](/placas/esp32-devkitc.jpg)
+![ESP32-DevKitC](/placas/esp32-devkitc.jpg)
 
 ## ESP32 Peripherals Features
 
@@ -18,7 +18,13 @@ description: ESP32-DevKitC Hardware
 - 2 Digital-to-Analog Converters (DAC)
 - 2 I2S interfaces
 
+
 ## GPIO Pins
+
+### Onboard LED
+
+- GPIO2
+
 
 ### Input Only Pins
 
@@ -52,12 +58,20 @@ description: ESP32-DevKitC Hardware
 
 ### Analog Pins
 
+The ESP32 has an analog to digital converter built into it with a resolution of up to 12 bits which is 4096 distinct values.
+
 - ADC1_CH0
 - ADC1_CH3
 - ADC1_CH4
 - ADC1_CH5
 - ADC1_CH6
 - ADC1_CH7
+
+
+### PWM Output pins
+
+The ESP32 LED PWM controller has 16 independent channels that can be configured to generate PWM signals with different properties. All pins that can act as outputs can be used as PWM pins (Input only pin GPIOs 34 to 39 can’t generate PWM).
+
 
 ### Capacitive touch GPIOs
 
@@ -71,6 +85,7 @@ description: ESP32-DevKitC Hardware
 - T7 (GPIO 27)
 - T8 (GPIO 33)
 - T9 (GPIO 32)
+
 
 ### Digital to Analog Converter (DAC) Pins
 
@@ -109,6 +124,7 @@ Another Serial port is available on
 
 - GPIO16 (U2RXD).
 - GIIO17 (U2TXD).
+
 
 ### I2C Pins
 

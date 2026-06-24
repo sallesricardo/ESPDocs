@@ -13,6 +13,10 @@ export default defineConfig({
                     label: 'ESP32-DevKitC',
                     items: [{ autogenerate: { directory: "esp32-devkitc" } }],
                 },
+                {
+                    label: 'ESP-IDF',
+                    items: [{ autogenerate: { directory: "esp-idf" } }],
+                },
             ],
 		}),
 	],
