@@ -22,7 +22,7 @@ idf.py set-target esp32
 
 > Para ver os targets disponíveis, execute o comando:
 > ```bash
-> idf.py list-targets
+> idf.py --list-targets
 > ```
 
 Para mudar as configurações do build, basta executar o comando:

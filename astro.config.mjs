@@ -17,6 +17,10 @@ export default defineConfig({
                     label: 'ESP-IDF',
                     items: [{ autogenerate: { directory: "esp-idf" } }],
                 },
+                {
+                    label: 'Funcionalidades',
+                    items: [{ autogenerate: { directory: "functions" } }],
+                },
             ],
 		}),
 	],
